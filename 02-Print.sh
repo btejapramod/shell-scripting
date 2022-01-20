@@ -18,4 +18,4 @@ echo "Hello World"
 # Magenta       35
 # Cyan          36
 
-echo -e "\e[31mRED\e [32mGREEN\e [33mYELLOW\e [34mBLUE\e [35mMAGENTA\e [36mCYAN\e[0m"
+echo -e "\e[31mRED\e[32mGREEN\e[33mYELLOW\e[34mBLUE\e[35mMAGENTA\e[36mCYAN\e[0m"
