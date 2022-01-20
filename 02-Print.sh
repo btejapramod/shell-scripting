@@ -19,3 +19,7 @@ echo "Hello World"
 # Cyan          36
 
 echo -e "\e[31mRED\e[32mGREEN\e[33mYELLOW\e[34mBLUE\e[35mMAGENTA\e[36mCYAN\e[0m"
+
+# The same colors can print with more brightness with BOLD option
+
+echo -e "\e[1;1mRED\e[1;32mGREEN\e[1;33mYELLOW\e[1;34mBLUE\e[1;35mMAGENTA\e[1;36mCYAN\e[0m"
