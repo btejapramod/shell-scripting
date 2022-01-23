@@ -12,7 +12,7 @@
 #
 ## cd /usr/share/nginx/html
 ## rm -rf *
-## unzip /tmp/frontend.zip
+##
 ## mv frontend-main/* .
 ## mv static/* .
 ## rm -rf frontend-master README.md
@@ -24,6 +24,7 @@
 #***********************************************************************
 #Delete the old content in the log file everytime we execute the script
 rm -f /tmp/roboshop.log
+#Variable is created for /tmp/roboshop.lof file.
 LOG_FILE=/tmp/roboshop.log
 #Installing nginx package
 
@@ -33,3 +34,11 @@ yum install nginx -y &>>$LOG_FILE #redirecting to the content to /tmp/roboshop.l
 #Download frontend code from repo
 echo "Downloading the frontend code"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
+
+#Delete all directories and files in html directory
+echo "Delete the old content"
+rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
+
+#Extracting the frontend.zip file
+ech0 "Extracting the frontend code" &>>$LOG_FILE
+unzip /tmp/frontend.zip &>>$LOG_FILE
