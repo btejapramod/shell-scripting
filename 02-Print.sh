@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Hello World"
+echo "Hello Universe"
 
 #When we print some times we print errors and to grab attention of user it is better to print color\
 
