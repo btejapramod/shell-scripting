@@ -20,3 +20,6 @@ echo Good Morning, today date and time is $time
 #arthimetic substitution
  EXPR1=$((2*2+8*2))
  echo EXPR1 Output = $EXPR1
+
+ #Trying to access a variable from shel command line
+ echo Course Name=$Course_Name
