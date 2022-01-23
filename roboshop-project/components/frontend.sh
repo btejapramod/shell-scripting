@@ -41,5 +41,15 @@ rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
 
 #Extracting the frontend.zip file
 echo "Extracting the frontend code"
-cd /usr/share/nginx/html/ &>>$LOG_FILE
+cd /tmp &>>$LOG_FILE
 unzip /tmp/frontend.zip &>>$LOG_FILE
+
+echo "Copy the extracted content to Nginx path"
+cp -r frontend-main/static/* /usr/share/nginx/html &>>$LOG_FILE
+
+echo "Copy the nginx roboshop config"
+cp frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG_FILE
+
+echo "Start Nginx Service"
+systemctl enable nginx &>>$LOG_FILE
+systemctl start nginx &>>$LOG_FILE
