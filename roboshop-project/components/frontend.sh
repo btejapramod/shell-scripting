@@ -41,7 +41,6 @@ rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
 
 #Extracting the frontend.zip file
 echo "Extracting the frontend code"
-cd /tmp &>>$LOG_FILE
 unzip /tmp/frontend.zip &>>$LOG_FILE
 
 echo "Copy the extracted content to Nginx path"
