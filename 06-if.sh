@@ -12,4 +12,8 @@ then
   echo not okay
   fi
 
+if [ -z "$b" ]; then
+  echo b is empty/not declared varaible
+  fi
+
 ###Number Ex
