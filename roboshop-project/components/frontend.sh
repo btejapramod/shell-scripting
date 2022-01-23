@@ -22,4 +22,4 @@
 
 ## systemctl restart nginx
 echo "Installing NGINX"
-yum install nginx -y
+yum install nginx -y >/tmp/roboshop.log
