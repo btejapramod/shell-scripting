@@ -26,7 +26,7 @@
 ## mongo < catalogue.js
 ## mongo < users.js
 
-souce components/common.sh
+source components/common.sh
 echo "Download mongodb repos"
 curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/roboshop-devops-project/mongodb/main/mongo.repo &>>LOG_FILE
 
