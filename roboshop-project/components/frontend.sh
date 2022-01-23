@@ -24,11 +24,12 @@
 #***********************************************************************
 #Delete the old content in the log file everytime we execute the script
 rm -f /tmp/roboshop.log
+LOG_FILE=/tmp/roboshop.log
 #Installing nginx package
 
 echo "Installing NGINX"
-yum install nginx -y >>/tmp/roboshop.log #redirecting to the content to /tmp/roboshop.log
+yum install nginx -y &>>$LOG_FILE #redirecting to the content to /tmp/roboshop.log
 
 #Download frontend code from repo
 echo "Downloading the frontend code"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >>/tmp/roboshop.log
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
