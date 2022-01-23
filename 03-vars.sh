@@ -15,4 +15,4 @@ date=$(date +%D)
 echo Good Morning, today date is $date
 
 time=$(date +%c)
-echo Good Morning, today's date and time is $time
+echo Good Morning, today date and time is $time
