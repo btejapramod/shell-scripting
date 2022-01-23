@@ -40,5 +40,5 @@ echo "Delete the old content"
 rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
 
 #Extracting the frontend.zip file
-ech0 "Extracting the frontend code" &>>$LOG_FILE
+echo "Extracting the frontend code" &>>$LOG_FILE
 unzip /tmp/frontend.zip &>>$LOG_FILE
