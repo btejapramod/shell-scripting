@@ -21,5 +21,11 @@
 #Finally restart the service once to effect the changes.
 
 ## systemctl restart nginx
+
+#Installing nginx package
 echo "Installing NGINX"
-yum install nginx -y >/tmp/roboshop.log
+yum install nginx -y >/tmp/roboshop.log #redirecting to the content to /tmp/roboshop.log
+
+#Download frontend code from repo
+echo "Downloading the frontend code"
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip >/tmp/roboshop.log
