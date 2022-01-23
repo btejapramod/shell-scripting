@@ -28,4 +28,4 @@ yum install nginx -y >/tmp/roboshop.log #redirecting to the content to /tmp/robo
 
 #Download frontend code from repo
 echo "Downloading the frontend code"
-curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip >/tmp/roboshop.log
+curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" >/tmp/roboshop.log
