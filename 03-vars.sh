@@ -13,3 +13,6 @@ echo todays date is $date
 #command substitution
 date=$(date +%D)
 echo Good Morning, today date is $date
+
+time=$(date +%c)
+echo Good Morning, today's date and time is $time
