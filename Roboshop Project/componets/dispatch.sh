@@ -1,3 +1,3 @@
-#!/bin/bash
 
-echo dispatch
+
+echo Installing dispatch

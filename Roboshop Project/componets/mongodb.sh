@@ -1,4 +1,3 @@
-#!/bin/bash
 
-echo mogodb
+echo Installing mogodb
 
