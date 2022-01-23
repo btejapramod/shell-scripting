@@ -21,8 +21,11 @@
 #Finally restart the service once to effect the changes.
 
 ## systemctl restart nginx
-
+#***********************************************************************
+#Delete the old content in the log file everytime we execute the script
+rm -f /tmp/roboshop.log
 #Installing nginx package
+
 echo "Installing NGINX"
 yum install nginx -y >>/tmp/roboshop.log #redirecting to the content to /tmp/roboshop.log
 
