@@ -21,5 +21,5 @@
 #Finally restart the service once to effect the changes.
 
 ## systemctl restart nginx
-
+echo "Installing NGINX"
 yum install nginx -y
