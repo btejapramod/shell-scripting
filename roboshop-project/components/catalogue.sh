@@ -61,9 +61,14 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 echo "Extract the Catalogue code"
 unzip /tmp/catalogue.zip &>>LOG_FILE
 
+echo "Clean old content"
+rm -rf /home/roboshop/catalogue
+
 echo "Copy catalogue content"
 cp -r catalogue-main catalogue &>>LOG_FILE
 
 echo "Install the dependencies"
 cd /home/roboshop/catalogue
 npm install &>>LOG_FILE
+
+chown roboshop:roboshop /home/roboshop/ -R
