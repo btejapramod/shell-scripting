@@ -1,5 +1,10 @@
 #!/bin/bash
 
+INSTANCE_NAME=$1
+if [ -z "$INSTANCE_NAME" ]; then
+echo -e "\e[1;33mInstance Name Argument is needed\e[0m"
+exit
+fi
 LOG=/tmp/instnace-create.log
 rm -f $LOG
 
