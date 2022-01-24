@@ -1,6 +1,6 @@
 #!/bin/bash
 LOG=/tmp/instance-create.log
-rm -f $LOG
+rm -rf $LOG
 
 INSTANCE_NAME=$1
 if [ -z "$INSTANCE_NAME" ];
