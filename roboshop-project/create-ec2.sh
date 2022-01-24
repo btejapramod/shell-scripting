@@ -5,8 +5,6 @@ if [ -z "$INSTANCE_NAME" ]; then
    echo -e "\e[1;33mInstance Name Argument is needed\e[0m"
   exit
 fi
-LOG=/tmp/instnace-create.log
-rm -f $LOG
 
 AMI_ID=$(aws ec2 describe-images --filters "Name=name,Values=Centos-7-DevOps-Practice" --query 'Images[*].[ImageId]' --output text)
 
