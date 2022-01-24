@@ -1,4 +1,6 @@
 #!/bin/bash
+LOG=/tmp/instance-create.log
+rm -f $LOG
 if [ -f components/$1.sh ]; then
 bash components/$1.sh
 else
