@@ -1,5 +1,5 @@
 #!/bin/bash
-sorce components/common.sh
+source components/common.sh
 
 #Installing nginx package
 echo "Installing NGINX"
