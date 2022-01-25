@@ -26,40 +26,41 @@ useradd roboshop &>>LOG_FILE
 fi
 STAT $?
 
-echo "Downloading the $COMPONENT code"
-curl -s -L -o /tmp/$COMPONENT.zip "https://github.com/roboshop-devops-project/$COMPONENT/archive/main.zip" &>>LOG_FILE
+echo "Downloading the ${COMPONENT} code"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>LOG_FILE
 STAT $?
 
-echo "Extract the $COMPONENT code"
+echo "Extract the ${COMPONENT} code"
 cd /tmp/
-unzip /tmp/$COMPONENT.zip &>>LOG_FILE
+unzip /tmp/${COMPONENT}.zip &>>LOG_FILE
 STAT $?
 
 echo "Clean old content"
-rm -rf /home/roboshop/$COMPONENT
+rm -rf /home/roboshop/${COMPONENT}
 STAT $?
 
-echo "Copy $COMPONENT content"
-cp -r $COMPONENT-main $COMPONENT &>>LOG_FILE
+echo "Copy ${COMPONENT} content"
+cp -r ${COMPONENT}-main ${COMPONENT} &>>LOG_FILE
 STAT $?
 
 echo "Install the dependencies"
-cd /home/roboshop/$COMPONENT
+cd /home/roboshop/${COMPONENT}
 npm install &>>LOG_FILE
 STAT $?
 
-chown roboshop:roboshop /home/roboshop/ -R
-echo "Update SystemD file"
-sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/$COMPONENT/systemd.service &>>$LOG_FILE
+chown roboshop:roboshop /home/roboshop/ -R &>>LOG_FILE
+
+echo "Update ${COMPONENT} SystemD file"
+sed -i -e 's/MONGO_DNSNAME/mongodb.roboshop.internal/' /home/roboshop/${COMPONENT}/systemd.service &>>$LOG_FILE
 STAT $?
 
-echo "Setup $COMPONENT SystemD file"
-mv /home/roboshop/$COMPONENT/systemd.service  /etc/systemd/system/$COMPONENT.service &>>$LOG_FILE
+echo "Setup ${COMPONENT} SystemD file"
+mv /home/roboshop/${COMPONENT}/systemd.service  /etc/systemd/system/${COMPONENT}.service &>>$LOG_FILE
 STAT $?
 
-echo "Start $COMPONENT"
+echo "Start ${COMPONENT}"
 systemctl daemon-relaod  &>>$LOG_FILE
-systemctl enable $COMPONENT &>>$LOG_FILE
-systemctl start $COMPONENT &>>$LOG_FILE
+systemctl enable ${COMPONENT} &>>$LOG_FILE
+systemctl start ${COMPONENT} &>>$LOG_FILE
 STAT $?
 }
