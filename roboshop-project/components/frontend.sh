@@ -3,7 +3,7 @@ source components/common.sh
 
 #Installing nginx package
 echo "Installing NGINX"
-yum install nginxx -y &>>$LOG_FILE #redirecting to the content to /tmp/roboshop.log
+yum install nginx -y &>>$LOG_FILE #redirecting to the content to /tmp/roboshop.log
 
 #Exit Status condition added
 if [ $? -eq 0 ]; then
