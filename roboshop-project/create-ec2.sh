@@ -35,6 +35,7 @@ if [ -z "${PRIVATE_IP}" ]; then
   echo -e "\e[1;32mInstance Created\e[0m"
 else
   echo "Instance ${INSTANCE_NAME} is already exists, Hence not creating"
+  exit
 fi
 
 IPADDRESS=$(aws ec2 describe-instances --filters "Name=tag:Name,Values=${INSTANCE_NAME}" --query 'Reservations[*].Instances[*].PrivateIpAddress' --output text)
@@ -44,7 +45,7 @@ echo '{
             "Changes": [{
             "Action": "UPSERT",
                         "ResourceRecordSet": {
-                                    "Name": "DNSNAME.roboshop.interna",
+                                    "Name": "DNSNAME.roboshop.internal",
                                     "Type": "A",
                                     "TTL": 300,
                                  "ResourceRecords": [{ "Value": "IPADDRESS"}]
