@@ -14,6 +14,7 @@ else
   echo -e "\e[1;33mAvailable Inputs - frontend|mongodb|catalogue|redis|user|cart|mysql|shipping|payment|rabbitmq|dispatch\e[0m"
   exit
   fi
+
 INSTANCE_NAME=$1
 if [ -z "${INSTANCE_NAME}" ]; then
   echo -e "\e[1;33mInstance Name Argument is needed\e[0m"
