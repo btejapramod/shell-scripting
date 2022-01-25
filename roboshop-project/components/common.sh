@@ -32,7 +32,7 @@ STAT $?
 
 echo "Extract the ${COMPONENT} code"
 cd /tmp/
-unzip /tmp/${COMPONENT}.zip &>>LOG_FILE
+unzip -o ${COMPONENT}.zip &>>LOG_FILE
 STAT $?
 
 echo "Clean old content"
