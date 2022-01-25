@@ -12,8 +12,8 @@ STAT $?
 echo "Update Redis Config file"
 if [ -f /etc/redis.conf ]; then
 sed -i -e "s/127.0.0.0/0.0.0.0/g" /etc/redis.conf &>>$LOG_FILE
-elif [ -f /etc/yum.repos.d/redis/repo ]; then
-  sed -e "s/127.0.0.0/0.0.0.0/g" e/etc/redis.conf &>>$LOG_FILE
+elif [ -f /etc/redis/redis.conf ]; then
+  sed -e "s/127.0.0.0/0.0.0.0/g" /etc/redis/redis.conf &>>$LOG_FILE
   fi
 STAT $?
 
