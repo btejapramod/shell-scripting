@@ -9,7 +9,7 @@ yum install nginxx -y &>>$LOG_FILE #redirecting to the content to /tmp/roboshop.
 if [ $? -eq 0 ]; then
   echo -e "\e[1;32mSUCCESS\e[0m"
   else
-    echo -e "\e1;31mFAILED\e[0m"
+    echo -e "\e[1;31mFAILED\e[0m"
     exit
     fi
 
