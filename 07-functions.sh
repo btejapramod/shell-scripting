@@ -7,3 +7,5 @@ SIMPLE() {
   echo "Welcome to Devops"
 
 }
+
+SAMPLE #Call the function.
