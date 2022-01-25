@@ -8,4 +8,4 @@ SIMPLE() {
 
 }
 
-SAMPLE #Call the function.
+SIMPLE #Call the function.
