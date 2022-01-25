@@ -40,7 +40,7 @@ rm -rf /home/roboshop/${COMPONENT}
 STAT $?
 
 echo "Copy ${COMPONENT} content"
-cp -r ${COMPONENT}-main ${COMPONENT} &>>LOG_FILE
+cp -r ${COMPONENT}-main /home/roboshop/${COMPONENT} &>>LOG_FILE
 STAT $?
 
 echo "Install the dependencies"
