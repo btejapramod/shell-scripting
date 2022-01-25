@@ -31,6 +31,7 @@ curl -s -L -o /tmp/$COMPONENT.zip "https://github.com/roboshop-devops-project/$C
 STAT $?
 
 echo "Extract the $COMPONENT code"
+cd /tmp/
 unzip /tmp/$COMPONENT.zip &>>LOG_FILE
 STAT $?
 
