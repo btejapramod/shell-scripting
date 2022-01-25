@@ -3,9 +3,14 @@
 # A set of data to a name is Variables.
 # A Set of commands to a name is called Functions.
 
-SIMPLE() {
+SAMPLE() {
+  echo "Welcome to Devops"
+  echo "Welcome to Devops"
+  echo "Welcome to Devops"
+  echo "Welcome to Devops"
   echo "Welcome to Devops"
 
 }
 
-SIMPLE #Call the function.
+SAMPLE #Call the function.
+SAMPLE
