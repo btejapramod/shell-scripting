@@ -18,7 +18,6 @@ SAMPLE() {
 ## Call the function
 a=10
 SAMPLE
-SAMPLE
 b=10
 
 SAMPLE1() {
