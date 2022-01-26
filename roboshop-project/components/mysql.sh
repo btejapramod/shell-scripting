@@ -83,3 +83,5 @@ STAT$?
 echo "Start the mysql service"
 systemctl enable mysqld &>>LOG_FILE
 systemctl start mysqld &>>LOG_FILE
+
+
