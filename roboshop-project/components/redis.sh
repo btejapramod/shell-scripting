@@ -18,6 +18,6 @@ fi
 STAT $?
 
 echo "Start the Redis Database"
-systemctl start redis  &>>$LOG_FILE
+systemctl restart redis  &>>$LOG_FILE
 systemctl enable redis &>>$LOG_FILE
 STAT $?
