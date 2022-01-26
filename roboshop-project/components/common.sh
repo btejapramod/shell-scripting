@@ -61,6 +61,6 @@ STAT $?
 echo "Start ${COMPONENT}"
 systemctl daemon-relaod  &>>$LOG_FILE
 systemctl enable ${COMPONENT} &>>$LOG_FILE
-systemctl start ${COMPONENT} &>>$LOG_FILE
+systemctl restart ${COMPONENT} &>>$LOG_FILE
 STAT $?
 }
