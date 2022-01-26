@@ -1,7 +1,6 @@
-#!/bin/bash
 source components/common.sh
 
-echo "Configuring the repos"
+echo "Configuring Redis repo"
 curl -L https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo -o /etc/yum.repos.d/redis.repo &>>$LOG_FILE
 STAT $?
 
@@ -17,7 +16,7 @@ elif [ -f /etc/redis/redis.conf  ]; then
 fi
 STAT $?
 
-echo "Start the Redis Database"
+echo "Start Redis"
+systemctl enable redis  &>>$LOG_FILE
 systemctl restart redis  &>>$LOG_FILE
-systemctl enable redis &>>$LOG_FILE
 STAT $?
