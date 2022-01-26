@@ -4,49 +4,39 @@ rm -f $LOG_FILE
 ## BUG about reaching one endpoint , To fix this we are using this command
 rm -f /etc/yum.repos.d/endpoint.repo
 
-
 STAT() {
   if [ $1 -eq 0 ]; then
-  echo -e "\e[1;32mSUCCESS\e[0m"
+    echo -e "\e[1;32m SUCCESS\e[0m"
   else
-    echo -e "\e[1;31mFAILED\e[0m"
+    echo -e "\e[1;31m FAILED\e[0m"
     exit 2
-    fi
-    }
-NODEJS(){
-COMPONENT=$1
-echo "Setup NodeJS Repo"
-curl -fsSL https://rpm.nodesource.com/setup_lts.x | bash - &>>LOG_FILE
-STAT $?
-
-echo "Install NodeJS"
-yum install nodejs gcc-c++ -y &>>LOG_FILE
-STAT $?
+  fi
+}
 
 APP_USER_SETUP_WITH_APP() {
-echo "Create APP User"
-id roboshop &>>LOG_FILE
-if [ $? -ne 0 ]; then
-useradd roboshop &>>LOG_FILE
-fi
-STAT $?
+  echo "Create App User"
+  id roboshop  &>>$LOG_FILE
+  if [ $? -ne 0 ]; then
+    useradd roboshop &>>$LOG_FILE
+  fi
+  STAT $?
 
-echo "Downloading the ${COMPONENT} code"
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>LOG_FILE
-STAT $?
+  echo "Download ${COMPONENT} Code"
+  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip" &>>$LOG_FILE
+  STAT $?
 
-echo "Extract the ${COMPONENT} code"
-cd /tmp/
-unzip -o ${COMPONENT}.zip &>>LOG_FILE
-STAT $?
+  echo "Extract ${COMPONENT} Code"
+  cd /tmp/
+  unzip -o ${COMPONENT}.zip &>>$LOG_FILE
+  STAT $?
 
-echo "Clean old ${COMPONENT} content"
-rm -rf /home/roboshop/${COMPONENT}
-STAT $?
+  echo "Clean Old ${COMPONENT} Content"
+  rm -rf /home/roboshop/${COMPONENT}
+  STAT $?
 
-echo "Copy ${COMPONENT} content"
-cp -r ${COMPONENT}-main /home/roboshop/${COMPONENT} &>>LOG_FILE
-STAT $?
+  echo "Copy ${COMPONENT} Content"
+  cp -r ${COMPONENT}-main /home/roboshop/${COMPONENT} &>>$LOG_FILE
+  STAT $?
 }
 
 SYSTEMD_SETUP() {
