@@ -19,6 +19,14 @@ systemctl start rabbitmq-server &>>$LOG_FILE
 STAT $?
 
 Echo "Setup the user RabbitMQ Application"
-rabbitmqctl add_user roboshop roboshop123 &>>$LOG_FILE
-rabbitmqctl set_user_tags roboshop administrator &>>$LOG_FILE
-rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
+id roboshop  &>>$LOG_FILE
+  if [ $? -ne 0 ]; then
+    sudo rabbitmqctl add_user roboshop roboshop123  &>>$LOG_FILE
+  fi
+  STAT $?
+
+sudo rabbitmqctl set_user_tags roboshop administrator &>>$LOG_FILE
+STAT $?
+
+sudo rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
+STAT $?
