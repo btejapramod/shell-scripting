@@ -9,9 +9,9 @@
 #
 #1. Add roboshop User
 #
-#```bash
+
 ## useradd roboshop
-#```
+
 #
 #1. Switch to roboshop user and perform the following commands.
 #
