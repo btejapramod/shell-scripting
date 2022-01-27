@@ -10,7 +10,6 @@
 #
 #1. Switch to roboshop user and perform the following commands.
 #
-
 #$ curl -L -s -o /tmp/dispatch.zip https://github.com/roboshop-devops-project/dispatch/archive/refs/heads/main.zip
 #$ unzip /tmp/dispatch.zip
 #$ mv dispatch-main dispatch
@@ -18,7 +17,6 @@
 #$ go mod init dispatch
 #$ go get
 #$ go build
-
 #
 #1. Update the systemd file and configure the dispatch service in systemd
 #

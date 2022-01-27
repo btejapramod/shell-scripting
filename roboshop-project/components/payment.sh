@@ -2,18 +2,13 @@
 source components/common.sh
 
 #1. Install Python 3
-
 ## yum install python36 gcc python3-devel -y
 
-
 #1. Create a user for running the application
-
 ## useradd roboshop
-
 #
 #1. Download the repo.
 #
-
 #$ cd /home/roboshop
 #$ curl -L -s -o /tmp/payment.zip "https://github.com/roboshop-devops-project/payment/archive/main.zip"
 #$ unzip /tmp/payment.zip
