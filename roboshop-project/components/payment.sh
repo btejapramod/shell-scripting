@@ -16,7 +16,6 @@ source components/common.sh
 #
 #1. Install the dependencies
 #
-
 ## cd /home/roboshop/payment
 ## pip3 install -r requirements.txt
 
