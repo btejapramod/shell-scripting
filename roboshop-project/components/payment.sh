@@ -18,7 +18,6 @@ source components/common.sh
 #
 ## cd /home/roboshop/payment
 ## pip3 install -r requirements.txt
-
 #
 #**Note: Above command may fail with permission denied, So run as root user**
 #
