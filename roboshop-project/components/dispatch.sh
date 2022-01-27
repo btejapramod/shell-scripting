@@ -6,7 +6,6 @@
 #
 #1. Add roboshop User
 #
-
 ## useradd roboshop
 
 #
