@@ -7,7 +7,6 @@
 #1. Add roboshop User
 #
 ## useradd roboshop
-
 #
 #1. Switch to roboshop user and perform the following commands.
 #
