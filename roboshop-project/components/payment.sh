@@ -18,14 +18,14 @@ source components/common.sh
 #$ curl -L -s -o /tmp/payment.zip "https://github.com/roboshop-devops-project/payment/archive/main.zip"
 #$ unzip /tmp/payment.zip
 #$ mv payment-main payment
-#```
+
 #
 #1. Install the dependencies
 #
-#```bash
+
 ## cd /home/roboshop/payment
 ## pip3 install -r requirements.txt
-#```
+
 #
 #**Note: Above command may fail with permission denied, So run as root user**
 #
