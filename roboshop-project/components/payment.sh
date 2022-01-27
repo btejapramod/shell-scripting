@@ -40,9 +40,9 @@ source components/common.sh
 #
 #3. Setup the service
 #
-#```sql
+
 ## mv /home/roboshop/payment/systemd.service /etc/systemd/system/payment.service
 ## systemctl daemon-reload
 ## systemctl enable payment
 ## systemctl start payment
-#```
+
