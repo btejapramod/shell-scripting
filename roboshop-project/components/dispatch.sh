@@ -5,7 +5,7 @@
 #
 
 ## yum install golang -y
-#```
+
 #
 #1. Add roboshop User
 #
