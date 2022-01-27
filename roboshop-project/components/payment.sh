@@ -2,11 +2,10 @@
 source components/common.sh
 
 #1. Install Python 3
-#
-#```sql
+
 ## yum install python36 gcc python3-devel -y
-#```
-#
+
+
 #1. Create a user for running the application
 #
 #```sql
