@@ -11,7 +11,7 @@ source components/common.sh
 #
 #```sql
 ## useradd roboshop
-#```
+
 #
 #1. Download the repo.
 #
