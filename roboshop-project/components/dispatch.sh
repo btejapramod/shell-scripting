@@ -27,9 +27,8 @@
 #
 #1. Update the systemd file and configure the dispatch service in systemd
 #
-#```bash
+
 ## mv /home/roboshop/dispatch/systemd.service /etc/systemd/system/dispatch.service
 ## systemctl daemon-reload
 ## systemctl enable dispatch
-## systemctl start dispatch
-#```
+
