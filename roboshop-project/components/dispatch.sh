@@ -3,7 +3,7 @@
 #
 #1. Install GoLang
 #
-#```bash
+
 ## yum install golang -y
 #```
 #
