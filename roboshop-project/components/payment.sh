@@ -7,8 +7,7 @@ source components/common.sh
 
 
 #1. Create a user for running the application
-#
-#```sql
+
 ## useradd roboshop
 
 #
