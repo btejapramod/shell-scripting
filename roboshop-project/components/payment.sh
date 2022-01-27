@@ -15,7 +15,7 @@ source components/common.sh
 #
 #1. Download the repo.
 #
-#```sql
+
 #$ cd /home/roboshop
 #$ curl -L -s -o /tmp/payment.zip "https://github.com/roboshop-devops-project/payment/archive/main.zip"
 #$ unzip /tmp/payment.zip
