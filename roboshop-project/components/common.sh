@@ -127,6 +127,7 @@ STAT $?
 APP_USER_SETUP_WITH_APP
 
 echo "Build GOLANG"
+cd /home/roboshop/${COMPONENT}
 go mod init dispatch &>>$LOG_FILE
 go get &>>$LOG_FILE
 go build &>>$LOG_FILE
