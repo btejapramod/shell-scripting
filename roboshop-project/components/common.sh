@@ -108,5 +108,5 @@ COMPONENT=$1
 echo "Install the dependecies for ${component}"
 cd /home/roboshop/payment
 pip3 install -r requirements.txt &>>$LOG_FILE
-
+STAT $?
 }
