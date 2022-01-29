@@ -6,6 +6,6 @@ for fruit in apple banana orange; do
 echo $fruit
 done
 
-for number in a=100
+for number in 100; do
 echo $number
 done
