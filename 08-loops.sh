@@ -2,6 +2,6 @@
 # for loop
 # while loop
 
-for fruit in apple banana ; do
+for fruit in apple banana orange; do
 echo $fruit
 done
