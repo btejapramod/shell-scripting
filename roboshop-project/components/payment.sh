@@ -41,4 +41,10 @@ echo "Install Python"
 yum install python36 gcc python3-devel -y &>>$LOG_FILE
 STAT $?
 
-APP_USER_SETUP_WITH_APP()
+APP_USER_SETUP_WITH_APP payment
+
+echo "Install the dependencies"
+cd /home/roboshop/payment &>>$LOG_FILE
+pip3 install -r requirements.txt &>>LOG_FILE
+STAT $?
+
