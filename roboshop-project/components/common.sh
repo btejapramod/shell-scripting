@@ -116,5 +116,21 @@ sed -i -e "/uid/ c uid = ${USER_ID}" -e "/gid/ c gid = ${GROUP_ID}" /home/robosh
 STAT $?
 
 SYSTEMD_SETUP
+}
 
+GOLANG(){
+  COMPONENT=$1
+  echo "Install GOLANG"
+  yum install golang -y &>>$LOG_FILE
+STAT $?
+
+APP_USER_SETUP_WITH_APP
+
+echo "Build GOLANG"
+go mod init dispatch &>>$LOG_FILE
+go get &>>$LOG_FILE
+go build &>>$LOG_FILE
+STAT $?
+
+SYSTEMD_SETUP
 }
