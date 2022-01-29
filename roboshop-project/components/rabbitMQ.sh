@@ -14,8 +14,7 @@ yum install rabbitmq-server -y &>>$LOG_FILE
 STAT $?
 
 echo "Start RabbitMQ Service"
-systemcl enable rabbitmq-server &>>$LOG_FILE
-systemctl start rabbitmq-server &>>$LOG_FILE
+systemcl enable rabbitmq-server &>>$LOG_FILE && systemctl start rabbitmq-server &>>$LOG_FILE
 STAT $?
 
 
@@ -27,6 +26,5 @@ sudo rabbitmqctl list_users | grep roboshop &>>LOG_FILE
 STAT $?
 
 echo "Setup permissions for APP User"
-sudo rabbitmqctl set_user_tags roboshop administrator &>>$LOG_FILE
-sudo rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
+sudo rabbitmqctl set_user_tags roboshop administrator &>>$LOG_FILE && sudo rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
 STAT $?
