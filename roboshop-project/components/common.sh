@@ -51,9 +51,7 @@ SYSTEMD_SETUP() {
   STAT $?
 
   echo "Start ${COMPONENT} Service"
-  systemctl daemon-relaod  &>>$LOG_FILE
-  systemctl enable ${COMPONENT} &>>$LOG_FILE
-  systemctl restart ${COMPONENT} &>>$LOG_FILE
+  systemctl daemon-relaod  &>>$LOG_FILE && systemctl enable ${COMPONENT} &>>$LOG_FILE && systemctl restart ${COMPONENT} &>>$LOG_FILE
   STAT $?
 }
 
@@ -128,9 +126,7 @@ APP_USER_SETUP_WITH_APP
 
 echo "Build GOLANG"
 cd /home/roboshop/${COMPONENT}
-go mod init dispatch &>>$LOG_FILE
-go get &>>$LOG_FILE
-go build &>>$LOG_FILE
+go mod init dispatch &>>$LOG_FILE && go get &>>$LOG_FILE && go build &>>$LOG_FILE
 STAT $?
 
 SYSTEMD_SETUP

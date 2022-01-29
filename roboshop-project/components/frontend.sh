@@ -34,6 +34,5 @@ sed -i -e '/catalogue/ s/localhost/catalogue.roboshop.internal/' -e '/user/ s/lo
 STAT $?
 
 echo "Start Nginx Service"
-systemctl enable nginx &>>$LOG_FILE
-systemctl restart nginx &>>$LOG_FILE
+systemctl enable nginx &>>$LOG_FILE && systemctl restart nginx &>>$LOG_FILE
 STAT $?
