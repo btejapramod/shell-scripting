@@ -55,7 +55,6 @@ SYSTEMD_SETUP() {
   systemctl enable ${COMPONENT} &>>$LOG_FILE
   systemctl restart ${COMPONENT} &>>$LOG_FILE
   STAT $?
-
 }
 
 NODEJS() {
