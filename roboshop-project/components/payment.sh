@@ -37,3 +37,8 @@ source components/common.sh
 ## systemctl enable payment
 ## systemctl start payment
 
+echo "Install Python"
+yum install python36 gcc python3-devel -y &>>$LOG_FILE
+STAT $?
+
+APP_USER_SETUP_WITH_APP()
