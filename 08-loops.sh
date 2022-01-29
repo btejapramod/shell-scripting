@@ -7,5 +7,5 @@ echo $fruit
 done
 
 for number in a=100
-echo $a
+echo $number
 done
