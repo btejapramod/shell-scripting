@@ -95,3 +95,18 @@ JAVA() {
 
   SYSTEMD_SETUP
 }
+
+python(){
+COMPONENT=$1
+
+  echo "Install Python"
+  yum install python36 gcc python3-devel -y &>>$LOG_FILE
+  STAT $?
+
+  APP_USER_SETUP_WITH_APP
+
+echo "Install the dependecies for ${component}"
+cd /home/roboshop/payment
+pip3 install -r requirements.txt &>>$LOG_FILE
+
+}
