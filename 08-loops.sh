@@ -14,7 +14,7 @@ done
 
 #While loop works on expressions that if condition is using.
 
-i=100000
+i=10
     while [ $i -gt 0 ]; do
     echo Iteration - $i
     i=$(($i-1))
