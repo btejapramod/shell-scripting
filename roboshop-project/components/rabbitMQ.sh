@@ -26,6 +26,7 @@ sudo rabbitmqctl list_users | grep roboshop &>>LOG_FILE
   fi
 STAT $?
 
+echo "Setup permissions for APP User"
 sudo rabbitmqctl set_user_tags roboshop administrator &>>$LOG_FILE
 sudo rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*" &>>$LOG_FILE
 STAT $?
