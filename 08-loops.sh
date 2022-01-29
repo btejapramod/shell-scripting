@@ -12,7 +12,12 @@ done
 
 #For loop is going to iterate number of time based on number of inputs.
 
-#While loop
+#While loop works on expressions that if condition is using.
+
+i=10
+    while [ $1 -gt 0 ]; do
+    echo Iteration - $1
+    done
 
 
 
