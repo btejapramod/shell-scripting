@@ -18,7 +18,7 @@ systemcl enable rabbitmq-server &>>$LOG_FILE
 systemctl start rabbitmq-server &>>$LOG_FILE
 STAT $?
 
-Echo "Setup the user RabbitMQ Application"
+Echo "Setup the user for RabbitMQ Application"
 id roboshop  &>>$LOG_FILE
   if [ $? -ne 0 ]; then
     sudo rabbitmqctl add_user roboshop roboshop123  &>>$LOG_FILE
